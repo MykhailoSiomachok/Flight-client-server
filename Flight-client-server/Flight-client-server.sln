@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flight-client-server", "Flight-client-server\Flight-client-server.csproj", "{4D2942C3-9790-4454-B8EE-2A77FDD1A6BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flights.DataAccess", "Flights.DataAccess\Flights.DataAccess.csproj", "{7F7BA86E-9CAE-43E5-89EB-739E38EAFC6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migrations", "Migrations\Migrations.csproj", "{3492B8C2-DAEB-410E-8AD0-A01B3B5908FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{E366BE61-4315-43B0-8BC2-C1BE3B92872D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightClient", "FlightClient\FlightClient.csproj", "{6F4C53DE-D155-47ED-A0EF-02B7D83ADAA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{CAEF45F5-DA76-4278-B24A-9ED1E8D8D4F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightTests.Unit", "FlightTests.Unit\FlightTests.Unit.csproj", "{E24B256B-11B6-440D-859A-9698D5B1763F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D2942C3-9790-4454-B8EE-2A77FDD1A6BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D2942C3-9790-4454-B8EE-2A77FDD1A6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D2942C3-9790-4454-B8EE-2A77FDD1A6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D2942C3-9790-4454-B8EE-2A77FDD1A6BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F7BA86E-9CAE-43E5-89EB-739E38EAFC6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F7BA86E-9CAE-43E5-89EB-739E38EAFC6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F7BA86E-9CAE-43E5-89EB-739E38EAFC6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F7BA86E-9CAE-43E5-89EB-739E38EAFC6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3492B8C2-DAEB-410E-8AD0-A01B3B5908FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3492B8C2-DAEB-410E-8AD0-A01B3B5908FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3492B8C2-DAEB-410E-8AD0-A01B3B5908FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3492B8C2-DAEB-410E-8AD0-A01B3B5908FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F4C53DE-D155-47ED-A0EF-02B7D83ADAA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F4C53DE-D155-47ED-A0EF-02B7D83ADAA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F4C53DE-D155-47ED-A0EF-02B7D83ADAA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F4C53DE-D155-47ED-A0EF-02B7D83ADAA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E24B256B-11B6-440D-859A-9698D5B1763F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E24B256B-11B6-440D-859A-9698D5B1763F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E24B256B-11B6-440D-859A-9698D5B1763F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E24B256B-11B6-440D-859A-9698D5B1763F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F7BA86E-9CAE-43E5-89EB-739E38EAFC6D} = {E366BE61-4315-43B0-8BC2-C1BE3B92872D}
+		{3492B8C2-DAEB-410E-8AD0-A01B3B5908FA} = {E366BE61-4315-43B0-8BC2-C1BE3B92872D}
+		{6F4C53DE-D155-47ED-A0EF-02B7D83ADAA8} = {CAEF45F5-DA76-4278-B24A-9ED1E8D8D4F6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DDFF068-0176-40B0-91B5-FCD3BC50B3F0}
+	EndGlobalSection
+EndGlobal
