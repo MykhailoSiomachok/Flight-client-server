@@ -1,3 +1,4 @@
+using Flight_client_server;
 using Flight_client_server.Profiles;
 
 using Flights.DataAccess;
@@ -22,6 +23,7 @@ builder.Services.AddDbContext<FlightContext>((db) =>
         sql.MigrationsHistoryTable("Migrations");
     });
 });
+builder.Services.AddScoped<IFlightService, FlightService>();
 
 var app = builder.Build();
 

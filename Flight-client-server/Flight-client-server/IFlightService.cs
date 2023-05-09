@@ -17,6 +17,6 @@ namespace Flight_client_server
 
         public Task EditFlight(UpdateFlightVM model);
 
-        public Task DeleteFlight(int id);
+        public Task DeleteFlight(Guid id);
     }
 }

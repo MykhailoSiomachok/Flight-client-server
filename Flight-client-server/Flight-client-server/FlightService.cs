@@ -26,9 +26,17 @@ public class FlightService : IFlightService
         return mapperModel.Id;
     }
 
-    public Task DeleteFlight(int id)
+    public async Task DeleteFlight(Guid id)
     {
-        throw new NotImplementedException();
+        var entity = _context.Flights.FirstOrDefault(x => x.Id == id);
+
+        if(entity is null)
+        {
+            return;
+        }
+        
+        _context.Flights.Remove(entity);
+        await _context.SaveChangesAsync();
     }
 
     public async Task EditFlight(UpdateFlightVM model)
