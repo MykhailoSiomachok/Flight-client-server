@@ -1,9 +1,7 @@
-﻿namespace Flight_client_server.Models
+﻿namespace Flight_client_server.Models.Filters
 {
-    public class FlightVM
+    public class CreateFlightVM
     {
-        public string Id { get; set; }
-
         public string FlightName { get; set; }
 
         public string Description { get; set; }

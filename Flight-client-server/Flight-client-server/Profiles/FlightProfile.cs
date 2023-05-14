@@ -2,9 +2,7 @@
 using System.Text.Json.Serialization;
 
 using AutoMapper;
-
-using Flight_client_server.Models;
-
+using Flight_client_server.Models.Filters;
 using Flights.DataAccess;
 
 namespace Flight_client_server.Profiles

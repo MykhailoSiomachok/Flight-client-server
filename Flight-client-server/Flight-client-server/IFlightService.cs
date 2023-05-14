@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
 
 using Flight_client_server.Models;
-
+using Flight_client_server.Models.Filters;
 using Flights.DataAccess;
 
 namespace Flight_client_server

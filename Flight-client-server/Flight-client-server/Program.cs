@@ -18,9 +18,11 @@ builder.Services.AddAutoMapper((cfg) =>
 });
 builder.Services.AddDbContext<FlightContext>((db) =>
 {
-    db.UseSqlServer("cntString",(sql) =>
+    db.UseNpgsql("Port=5434;Server=localhost;Database=Flight;UserId=postgres;Password=DoNotTellAnyone",
+        (sql) =>
     {
         sql.MigrationsHistoryTable("Migrations");
+        sql.MigrationsAssembly("DataAccess.Migrations");
     });
 });
 builder.Services.AddScoped<IFlightService, FlightService>();

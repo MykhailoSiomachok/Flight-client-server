@@ -1,6 +1,6 @@
 using Flight_client_server.Helpers;
 using Flight_client_server.Models;
-
+using Flight_client_server.Models.Filters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Flight_client_server.Controllers

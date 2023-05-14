@@ -1,6 +1,6 @@
-﻿namespace Flight_client_server.Models
+﻿namespace Flight_client_server.Models.Filters
 {
-    public class UpdateFlightVM
+    public class FlightVM
     {
         public string Id { get; set; }
 
