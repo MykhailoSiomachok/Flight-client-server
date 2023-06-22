@@ -91,7 +91,7 @@ namespace Flight_client_server.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteFlight([FromQuery] Guid flightId)
+        public async Task<IActionResult> DeleteFlight([FromQuery] string flightId)
         {
             try
             {

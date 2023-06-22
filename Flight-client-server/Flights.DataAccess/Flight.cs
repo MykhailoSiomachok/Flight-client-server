@@ -5,7 +5,7 @@ namespace Flights.DataAccess;
 
 public partial class Flight
 {
-    public Guid Id { get; set; }
+    public string Id { get; set; }
 
     public string? FlightName { get; set; }
 

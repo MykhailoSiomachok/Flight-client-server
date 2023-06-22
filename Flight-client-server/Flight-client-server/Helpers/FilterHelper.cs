@@ -27,24 +27,24 @@ namespace Flight_client_server.Helpers
 
             Func<Flight, bool> filter = (_) => true;
 
-            if (model.Id.HasValue)
+            if (!string.IsNullOrEmpty(model.Id))
             {
-                filter = (x) => x.Id == model.Id && filter(x);
+                filter = (x) => x.Id == model.Id;
             }
 
             if (!string.IsNullOrEmpty(model.FlightName))
             {
-                filter = (x) => x.FlightName.Contains(model.FlightName) && filter(x);
+                filter = (x) => x.FlightName.Contains(model.FlightName);
             }
 
             if (!string.IsNullOrEmpty(model.Description))
             {
-                filter = (x) => x.FlightName.Contains(model.Description) && filter(x);
+                filter = (x) => x.FlightName.Contains(model.Description);
             }
 
             if (model.SoldTicketsAmount.HasValue)
             {
-                filter = (x) => x.SoldTicketsAmount == model.SoldTicketsAmount && filter(x);
+                filter = (x) => x.SoldTicketsAmount == model.SoldTicketsAmount;
             }
 
             if (model.Route is not null && model.Route.Any())
@@ -58,7 +58,7 @@ namespace Flight_client_server.Helpers
                         IsSubroute = true;
                     }
 
-                    return IsSubroute && filter(x);
+                    return IsSubroute;
                 };
             }
 

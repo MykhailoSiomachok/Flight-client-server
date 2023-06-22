@@ -15,7 +15,6 @@ namespace Flight_client_server.Profiles
                 .ForMember(x => x.Route, y => y.MapFrom(o => JsonSerializer.Deserialize<List<string>>(o.Route, (JsonSerializerOptions)null)));
 
             CreateMap<CreateFlightVM, Flight>()
-                .ForMember(x => x.Id, _ => Guid.NewGuid())
                 .ForMember(x => x.Route, y => y.MapFrom(o => JsonSerializer.Serialize(o.Route, (JsonSerializerOptions)null)));
             CreateMap<UpdateFlightVM, Flight>()
                 .ForMember(x => x.Route, y => y.MapFrom(o => JsonSerializer.Serialize(o.Route, (JsonSerializerOptions)null)));

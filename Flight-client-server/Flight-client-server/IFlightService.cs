@@ -13,10 +13,10 @@ namespace Flight_client_server
         public Task<BatchDataResult<FlightVM>> GetFlights(Func<Flight, bool> filter);
         public Task<BatchDataResult<FlightVM>> GetFlights(Func<Flight, bool> filter, int take, int skip);
 
-        public Task<Guid> CreateFlight(CreateFlightVM model);
+        public Task<string> CreateFlight(CreateFlightVM model);
 
         public Task EditFlight(UpdateFlightVM model);
 
-        public Task DeleteFlight(Guid id);
+        public Task DeleteFlight(string id);
     }
 }

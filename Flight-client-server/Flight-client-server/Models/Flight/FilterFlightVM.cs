@@ -4,7 +4,7 @@ namespace Flight_client_server.Models
 {
     public class FilterFlightVM: IFilterModel
     {
-         public Guid? Id { get; set; }
+         public string? Id { get; set; }
 
         public string? FlightName { get; set; }
 

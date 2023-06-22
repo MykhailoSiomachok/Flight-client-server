@@ -16,17 +16,20 @@ public class FlightService : IFlightService
         _context = context;
     }
 
-    public async Task<Guid> CreateFlight(CreateFlightVM model)
+    public async Task<string> CreateFlight(CreateFlightVM model)
     {
         var mapperModel = _mapper.Map<Flight>(model);
 
+        mapperModel.Id = Guid.NewGuid().ToString();
+
         _context.Flights.Add(mapperModel);
+
         await _context.SaveChangesAsync();
 
         return mapperModel.Id;
     }
 
-    public async Task DeleteFlight(Guid id)
+    public async Task DeleteFlight(string id)
     {
         var entity = _context.Flights.FirstOrDefault(x => x.Id == id);
 
@@ -64,6 +67,10 @@ public class FlightService : IFlightService
     {
         var flights = _context.Flights.Where(filter);
 
+        if(!flights.Any())
+        {
+            return new BatchDataResult<FlightVM>();
+        }
         var mappedFlights = _mapper.Map<IEnumerable<FlightVM>>(flights);
 
         return new BatchDataResult<FlightVM>()
